@@ -8,13 +8,13 @@ open AnnalynsInfiltration
 
 [<Fact>]
 [<Task(1)>]
-let ``Cannot execute fast attack if knight is awake``() =
+let ``Cannot execute fast attack if knight is awake`` () =
     let knightIsAwake = true
     canFastAttack knightIsAwake |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(1)>]
-let ``Can execute fast attack if knight is sleeping``() =
+let ``Can execute fast attack if knight is sleeping`` () =
     let knightIsAwake = false
     canFastAttack knightIsAwake |> should equal true
 
