@@ -1,0 +1,5 @@
+# fsharp
+.config/
+.exercism/
+bin/
+obj/
