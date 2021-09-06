@@ -134,7 +134,7 @@ let ``Cannot signal prisoner if archer and prisoner are both awake`` () =
     canSignalPrisoner archerIsAwake prisonerIsAwake
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if everyone is awake and pet dog is present`` () =
     let knightIsAwake = true
@@ -145,7 +145,7 @@ let ``Cannot release prisoner if everyone is awake and pet dog is present`` () =
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if everyone is awake and pet dog is absent`` () =
     let knightIsAwake = true
@@ -156,7 +156,7 @@ let ``Cannot release prisoner if everyone is awake and pet dog is absent`` () =
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Can release prisoner if everyone is asleep and pet dog is present`` () =
     let knightIsAwake = false
@@ -167,7 +167,7 @@ let ``Can release prisoner if everyone is asleep and pet dog is present`` () =
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal true
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if everyone is asleep and pet dog is absent`` () =
     let knightIsAwake = false
@@ -178,7 +178,7 @@ let ``Cannot release prisoner if everyone is asleep and pet dog is absent`` () =
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Can release prisoner if only prisoner is awake and pet dog is present`` () =
     let knightIsAwake = false
@@ -189,7 +189,7 @@ let ``Can release prisoner if only prisoner is awake and pet dog is present`` ()
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal true
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Can release prisoner if only prisoner is awake and pet dog is absent`` () =
     let knightIsAwake = false
@@ -200,7 +200,7 @@ let ``Can release prisoner if only prisoner is awake and pet dog is absent`` () 
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal true
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if only archer is awake and pet dog is present`` () =
     let knightIsAwake = false
@@ -211,7 +211,7 @@ let ``Cannot release prisoner if only archer is awake and pet dog is present`` (
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if only archer is awake and pet dog is absent`` () =
     let knightIsAwake = false
@@ -222,7 +222,7 @@ let ``Cannot release prisoner if only archer is awake and pet dog is absent`` ()
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Can release prisoner if only knight is awake and pet dog is present`` () =
     let knightIsAwake = true
@@ -233,7 +233,7 @@ let ``Can release prisoner if only knight is awake and pet dog is present`` () =
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal true
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if only knight is awake and pet dog is absent`` () =
     let knightIsAwake = true
@@ -244,7 +244,7 @@ let ``Cannot release prisoner if only knight is awake and pet dog is absent`` ()
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if only knight is asleep and pet dog is present`` () =
     let knightIsAwake = false
@@ -255,7 +255,7 @@ let ``Cannot release prisoner if only knight is asleep and pet dog is present`` 
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if only knight is asleep and pet dog is absent`` () =
     let knightIsAwake = false
@@ -266,7 +266,7 @@ let ``Cannot release prisoner if only knight is asleep and pet dog is absent`` (
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Can release prisoner if only archer is asleep and pet dog is present`` () =
     let knightIsAwake = true
@@ -277,7 +277,7 @@ let ``Can release prisoner if only archer is asleep and pet dog is present`` () 
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal true
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if only archer is asleep and pet dog is absent`` () =
     let knightIsAwake = true
@@ -288,7 +288,7 @@ let ``Cannot release prisoner if only archer is asleep and pet dog is absent`` (
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if only prisoner is asleep and pet dog is present`` () =
     let knightIsAwake = true
@@ -299,7 +299,7 @@ let ``Cannot release prisoner if only prisoner is asleep and pet dog is present`
     canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(4)>]
 let ``Cannot release prisoner if only prisoner is asleep and pet dog is absent`` () =
     let knightIsAwake = true
