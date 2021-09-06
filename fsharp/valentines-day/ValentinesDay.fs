@@ -22,5 +22,11 @@ type Activity =
     | Restaurant of Cuisine
     | Walk of int
 
-let rateActivity (activity: Activity) : Approval =
-    failwith "Please implement the 'rateActivity' function"
+let rateActivity activity =
+    match activity with
+    | Movie genre when genre = Romance -> Yes
+    | Restaurant cuisine when cuisine = Korean -> Yes
+    | Restaurant _ -> Maybe
+    | Walk kilometers when kilometers < 3 -> Yes
+    | Walk kilometers when kilometers < 5 -> Maybe
+    | _ -> No
