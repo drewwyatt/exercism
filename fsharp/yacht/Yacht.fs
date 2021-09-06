@@ -44,10 +44,18 @@ let valueOf die =
 let sumAll die dice =
     dice
     |> List.filter (fun d -> d = die)
-    |> List.map valueOf
-    |> List.sum
+    |> List.sumBy valueOf
+
+let scoreYacht dice =
+    let numberOfFivs =
+        dice
+        |> List.filter (fun die -> die = Five)
+        |> List.length
+
+    if numberOfFivs = 5 then 50 else 0
 
 
 let score category dice =
     match category with
+    | Yacht -> scoreYacht dice
     | _ -> sumAll (dieFrom category) dice
