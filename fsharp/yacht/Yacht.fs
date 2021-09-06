@@ -46,6 +46,30 @@ let sumAll die dice =
     |> List.filter (fun d -> d = die)
     |> List.sumBy valueOf
 
+let scoreFullHouse dice =
+    let mutable expectedCounts = [ 2; 3 ]
+
+    let countAvaiable ((_, count)) =
+        if List.contains count expectedCounts then
+            expectedCounts <- List.filter (fun c -> c <> count) expectedCounts
+            true
+        else
+            false
+
+
+    let counts =
+        dice
+        |> List.toSeq
+        |> Seq.countBy id
+        |> Seq.filter countAvaiable
+
+    if (Seq.length counts) = 2 then
+        List.sumBy valueOf dice
+    else
+        0
+
+
+
 let scoreYacht dice =
     let numberOfFivs =
         dice
@@ -57,5 +81,6 @@ let scoreYacht dice =
 
 let score category dice =
     match category with
+    | FullHouse -> scoreFullHouse dice
     | Yacht -> scoreYacht dice
     | _ -> sumAll (dieFrom category) dice

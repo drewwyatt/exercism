@@ -115,7 +115,7 @@ let ``Sixes`` () =
           Die.Six ]
     |> should equal 6
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Full house two small, three big`` () =
     score
         Category.FullHouse
@@ -126,7 +126,7 @@ let ``Full house two small, three big`` () =
           Die.Four ]
     |> should equal 16
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Full house three small, two big`` () =
     score
         Category.FullHouse
@@ -137,7 +137,7 @@ let ``Full house three small, two big`` () =
           Die.Three ]
     |> should equal 19
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Two pair is not a full house`` () =
     score
         Category.FullHouse
@@ -148,7 +148,7 @@ let ``Two pair is not a full house`` () =
           Die.Five ]
     |> should equal 0
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Four of a kind is not a full house`` () =
     score
         Category.FullHouse
@@ -159,7 +159,7 @@ let ``Four of a kind is not a full house`` () =
           Die.Four ]
     |> should equal 0
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Yacht is not a full house`` () =
     score
         Category.FullHouse
