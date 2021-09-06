@@ -20,8 +20,5 @@ let productionRatePerHour (speed: int) : float =
 
     (float (speed * 221)) * successRate
 
-
-
-
 let workingItemsPerMinute (speed: int) : int =
-    failwith "Please implement the 'workingItemsPerMinute' function"
+    (int (productionRatePerHour speed)) / 60
