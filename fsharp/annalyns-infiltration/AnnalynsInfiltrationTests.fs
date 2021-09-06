@@ -98,7 +98,7 @@ let ``Can spy if everyone is awake`` () =
     canSpy knightIsAwake archerIsAwake prisonerIsAwake
     |> should equal true
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(3)>]
 let ``Can signal prisoner if archer is sleeping and prisoner is awake`` () =
     let archerIsAwake = false
@@ -107,7 +107,7 @@ let ``Can signal prisoner if archer is sleeping and prisoner is awake`` () =
     canSignalPrisoner archerIsAwake prisonerIsAwake
     |> should equal true
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(3)>]
 let ``Cannot signal prisoner if archer is awake and prisoner is sleeping`` () =
     let archerIsAwake = true
@@ -116,7 +116,7 @@ let ``Cannot signal prisoner if archer is awake and prisoner is sleeping`` () =
     canSignalPrisoner archerIsAwake prisonerIsAwake
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(3)>]
 let ``Cannot signal prisoner if archer and prisoner are both sleeping`` () =
     let archerIsAwake = false
@@ -125,7 +125,7 @@ let ``Cannot signal prisoner if archer and prisoner are both sleeping`` () =
     canSignalPrisoner archerIsAwake prisonerIsAwake
     |> should equal false
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(3)>]
 let ``Cannot signal prisoner if archer and prisoner are both awake`` () =
     let archerIsAwake = true
