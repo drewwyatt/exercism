@@ -49,7 +49,7 @@ let sumAll die dice =
 let scoreFullHouse dice =
     let mutable expectedCounts = [ 2; 3 ]
 
-    let countAvaiable ((_, count)) =
+    let countAvaiable (_, count) =
         if List.contains count expectedCounts then
             expectedCounts <- List.filter (fun c -> c <> count) expectedCounts
             true
@@ -68,7 +68,16 @@ let scoreFullHouse dice =
     else
         0
 
+let scoreFourOfAKind dice =
+    let result =
+        dice
+        |> List.toSeq
+        |> Seq.countBy id
+        |> Seq.tryFind (fun (_, count) -> count > 3)
 
+    match result with
+    | Some (die, _) -> (valueOf die) * 4
+    | None -> 0
 
 let scoreYacht dice =
     let numberOfFivs =
@@ -78,9 +87,9 @@ let scoreYacht dice =
 
     if numberOfFivs = 5 then 50 else 0
 
-
 let score category dice =
     match category with
     | FullHouse -> scoreFullHouse dice
+    | FourOfAKind -> scoreFourOfAKind dice
     | Yacht -> scoreYacht dice
     | _ -> sumAll (dieFrom category) dice

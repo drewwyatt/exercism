@@ -170,7 +170,7 @@ let ``Yacht is not a full house`` () =
           Die.Two ]
     |> should equal 0
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Four of a Kind`` () =
     score
         Category.FourOfAKind
@@ -181,7 +181,7 @@ let ``Four of a Kind`` () =
           Die.Six ]
     |> should equal 24
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Yacht can be scored as Four of a Kind`` () =
     score
         Category.FourOfAKind
@@ -192,7 +192,7 @@ let ``Yacht can be scored as Four of a Kind`` () =
           Die.Three ]
     |> should equal 12
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Full house is not Four of a Kind`` () =
     score
         Category.FourOfAKind
