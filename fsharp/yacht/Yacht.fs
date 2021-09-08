@@ -41,9 +41,14 @@ let valueOf die =
     | Five -> 5
     | Six -> 6
 
-let sumAll die dice =
+let sumAll category dice =
+    let predicate die =
+        match category with
+        | Choice -> true
+        | _ -> die = (dieFrom category)
+
     dice
-    |> List.filter (fun d -> d = die)
+    |> List.filter predicate
     |> List.sumBy valueOf
 
 let scoreFullHouse dice =
@@ -55,7 +60,6 @@ let scoreFullHouse dice =
             true
         else
             false
-
 
     let counts =
         dice
@@ -87,8 +91,6 @@ let scoreStraight category dice =
     | (BigStraight, [ 2; 3; 4; 5; 6 ]) -> 30
     | _ -> 0
 
-
-
 let scoreYacht dice =
     let numberOfFivs =
         dice
@@ -97,6 +99,8 @@ let scoreYacht dice =
 
     if numberOfFivs = 5 then 50 else 0
 
+
+
 let score category dice =
     match category with
     | FullHouse -> scoreFullHouse dice
@@ -104,4 +108,4 @@ let score category dice =
     | LittleStraight
     | BigStraight -> scoreStraight category dice
     | Yacht -> scoreYacht dice
-    | _ -> sumAll (dieFrom category) dice
+    | _ -> sumAll category dice

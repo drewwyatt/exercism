@@ -291,7 +291,7 @@ let ``No pairs but not a big straight`` () =
           Die.One ]
     |> should equal 0
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Choice`` () =
     score
         Category.Choice
@@ -302,7 +302,7 @@ let ``Choice`` () =
           Die.Six ]
     |> should equal 23
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Yacht as choice`` () =
     score
         Category.Choice
