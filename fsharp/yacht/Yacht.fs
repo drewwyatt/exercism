@@ -79,6 +79,16 @@ let scoreFourOfAKind dice =
     | Some (die, _) -> (valueOf die) * 4
     | None -> 0
 
+let scoreStraight category dice =
+    let values = List.map valueOf dice |> List.sort
+
+    match (category, values) with
+    | (LittleStraight, [ 1; 2; 3; 4; 5 ]) -> 30
+    | (BigStraight, [ 2; 3; 4; 5; 6 ]) -> 30
+    | _ -> 0
+
+
+
 let scoreYacht dice =
     let numberOfFivs =
         dice
@@ -91,5 +101,7 @@ let score category dice =
     match category with
     | FullHouse -> scoreFullHouse dice
     | FourOfAKind -> scoreFourOfAKind dice
+    | LittleStraight
+    | BigStraight -> scoreStraight category dice
     | Yacht -> scoreYacht dice
     | _ -> sumAll (dieFrom category) dice

@@ -203,7 +203,7 @@ let ``Full house is not Four of a Kind`` () =
           Die.Five ]
     |> should equal 0
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Little Straight`` () =
     score
         Category.LittleStraight
@@ -214,7 +214,7 @@ let ``Little Straight`` () =
           Die.Two ]
     |> should equal 30
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Little Straight as Big Straight`` () =
     score
         Category.BigStraight
@@ -225,7 +225,7 @@ let ``Little Straight as Big Straight`` () =
           Die.Five ]
     |> should equal 0
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Four in order but not a little straight`` () =
     score
         Category.LittleStraight
@@ -236,7 +236,7 @@ let ``Four in order but not a little straight`` () =
           Die.Four ]
     |> should equal 0
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``No pairs but not a little straight`` () =
     score
         Category.LittleStraight
@@ -247,7 +247,7 @@ let ``No pairs but not a little straight`` () =
           Die.Six ]
     |> should equal 0
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Minimum is 1, maximum is 5, but not a little straight`` () =
     score
         Category.LittleStraight
@@ -258,7 +258,7 @@ let ``Minimum is 1, maximum is 5, but not a little straight`` () =
           Die.Five ]
     |> should equal 0
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Big Straight`` () =
     score
         Category.BigStraight
@@ -269,7 +269,7 @@ let ``Big Straight`` () =
           Die.Three ]
     |> should equal 30
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``Big Straight as little straight`` () =
     score
         Category.LittleStraight
@@ -280,7 +280,7 @@ let ``Big Straight as little straight`` () =
           Die.Two ]
     |> should equal 0
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 let ``No pairs but not a big straight`` () =
     score
         Category.BigStraight
