@@ -48,25 +48,25 @@ let ``Info log level`` () =
     logLevel "[INFO]: Timezone changed"
     |> should equal "info"
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(3)>]
 let ``Error reformat`` () =
     reformat "[ERROR]: Segmentation fault"
     |> should equal "Segmentation fault (error)"
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(3)>]
 let ``Warning reformat`` () =
     reformat "[WARNING]: Decreased performance"
     |> should equal "Decreased performance (warning)"
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(3)>]
 let ``Info reformat`` () =
     reformat "[INFO]: Disk defragmented"
     |> should equal "Disk defragmented (info)"
 
-[<Fact(Skip = "Remove this Skip property to run this test")>]
+[<Fact>]
 [<Task(3)>]
 let ``Reformat with leading and trailing white space`` () =
     reformat "[ERROR]: \t Corrupt disk\t \t \r\n"

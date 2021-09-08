@@ -39,5 +39,5 @@ let logLevel logLine =
     | ERROR _ -> "error"
     | _ -> failwith (sprintf "could not parse log line '%s'" logLine)
 
-let reformat (logLine: string) : string =
-    failwith "Please implement the 'reformat' function"
+let reformat logLine =
+    sprintf "%s (%s)" (message logLine) (logLevel logLine)
