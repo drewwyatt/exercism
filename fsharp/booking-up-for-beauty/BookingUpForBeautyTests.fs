@@ -61,67 +61,67 @@ type BookingUpForBeautyTests() =
         schedule "Thursday, December 5, 2019 09:00:00"
         |> should equal (DateTime(2019, 12, 5, 9, 0, 0))
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment 1 year ago`` () =
         hasPassed (DateTime.Now.AddYears(-1).AddHours(2.0))
         |> should equal true
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment months ago`` () =
         hasPassed (DateTime.Now.AddMonths(-8))
         |> should equal true
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment days ago`` () =
         hasPassed (DateTime.Now.AddDays(-23.0))
         |> should equal true
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment hours ago`` () =
         hasPassed (DateTime.Now.AddHours(-12.0))
         |> should equal true
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment minutes ago`` () =
         hasPassed (DateTime.Now.AddMinutes(-55.0))
         |> should equal true
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment 1 minute ago`` () =
         hasPassed (DateTime.Now.AddMinutes(-1.0))
         |> should equal true
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment in 1 minute`` () =
         hasPassed (DateTime.Now.AddMinutes(1.0))
         |> should equal false
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment in minutes`` () =
         hasPassed (DateTime.Now.AddMinutes(5.0))
         |> should equal false
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment in days`` () =
         hasPassed (DateTime.Now.AddDays(19.0))
         |> should equal false
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment in months`` () =
         hasPassed (DateTime.Now.AddMonths(10))
         |> should equal false
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(2)>]
     let ``Has passed with appointment in years`` () =
         hasPassed (DateTime.Now.AddYears(2).AddMonths(3).AddDays(6.0))
