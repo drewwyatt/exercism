@@ -17,5 +17,5 @@ let description (appointmentDate: DateTime) =
         (appointmentDate.ToShortDateString())
         (appointmentDate.ToLongTimeString())
 
-let anniversaryDate () : DateTime =
-    failwith "Please implement the 'anniversaryDate' function"
+let anniversaryDate () =
+    DateTime(DateTime.Today.Year, 9, 15, 0, 0, 0)
