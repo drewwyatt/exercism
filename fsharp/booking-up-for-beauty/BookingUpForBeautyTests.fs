@@ -169,19 +169,19 @@ type BookingUpForBeautyTests() =
         isAfternoonAppointment (DateTime(2019, 9, 1, 23, 59, 59))
         |> should equal false
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(4)>]
     let ``Description on Friday afternoon`` () =
         description (DateTime(2019, 3, 29, 15, 0, 0))
         |> should equal "You have an appointment on 3/29/2019 3:00:00 PM."
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(4)>]
     let ``Description on Thursday afternoon`` () =
         description (DateTime(2019, 7, 25, 13, 45, 0))
         |> should equal "You have an appointment on 7/25/2019 1:45:00 PM."
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(4)>]
     let ``Description on Wednesday morning`` () =
         description (DateTime(2020, 9, 9, 9, 9, 9))

@@ -11,8 +11,11 @@ let isAfternoonAppointment (appointmentDate: DateTime) =
     appointmentDate.Hour > 11
     && appointmentDate.Hour < 18
 
-let description (appointmentDate: DateTime) : string =
-    failwith "Please implement the 'description' function"
+let description (appointmentDate: DateTime) =
+    sprintf
+        "You have an appointment on %s %s."
+        (appointmentDate.ToShortDateString())
+        (appointmentDate.ToLongTimeString())
 
 let anniversaryDate () : DateTime =
     failwith "Please implement the 'anniversaryDate' function"
