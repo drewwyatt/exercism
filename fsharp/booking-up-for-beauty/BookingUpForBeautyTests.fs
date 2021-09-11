@@ -127,43 +127,43 @@ type BookingUpForBeautyTests() =
         hasPassed (DateTime.Now.AddYears(2).AddMonths(3).AddDays(6.0))
         |> should equal false
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(3)>]
     let ``Is afternoon appointment for early morning appointment`` () =
         isAfternoonAppointment (DateTime(2019, 6, 17, 8, 15, 0))
         |> should equal false
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(3)>]
     let ``Is afternoon appointment for late morning appointment`` () =
         isAfternoonAppointment (DateTime(2019, 2, 23, 11, 59, 59))
         |> should equal false
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(3)>]
     let ``Is afternoon appointment for noon appointment`` () =
         isAfternoonAppointment (DateTime(2019, 8, 9, 12, 0, 0))
         |> should equal true
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(3)>]
     let ``Is afternoon appointment for early afternoon appointment`` () =
         isAfternoonAppointment (DateTime(2019, 8, 9, 12, 0, 1))
         |> should equal true
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(3)>]
     let ``Is afternoon appointment for late afternoon appointment`` () =
         isAfternoonAppointment (DateTime(2019, 9, 1, 17, 59, 59))
         |> should equal true
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(3)>]
     let ``Is afternoon appointment for early evening appointment`` () =
         isAfternoonAppointment (DateTime(2019, 9, 1, 18, 0, 0))
         |> should equal false
 
-    [<Fact(Skip = "Remove this Skip property to run this test")>]
+    [<Fact>]
     [<Task(3)>]
     let ``Is afternoon appointment for late evening appointment`` () =
         isAfternoonAppointment (DateTime(2019, 9, 1, 23, 59, 59))
