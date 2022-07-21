@@ -1,0 +1,5 @@
+{
+  "name": "exercism",
+  "private": true,
+  "workspaces": ["typescript/*"]
+}

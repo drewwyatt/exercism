@@ -3,3 +3,4 @@
 .exercism/
 bin/
 obj/
+node_modules/
